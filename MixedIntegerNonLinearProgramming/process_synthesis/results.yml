@@ -1,0 +1,61 @@
+# ==========================================================
+# = Solver Results                                         =
+# ==========================================================
+# ----------------------------------------------------------
+#   Problem Information
+# ----------------------------------------------------------
+Problem: 
+- Lower bound: -inf
+  Upper bound: inf
+  Number of objectives: 1
+  Number of constraints: 0
+  Number of variables: 14
+  Sense: unknown
+# ----------------------------------------------------------
+#   Solver Information
+# ----------------------------------------------------------
+Solver: 
+- Status: ok
+  Message: bonmin\x3a Optimal
+  Termination condition: optimal
+  Id: 3
+  Error rc: 0
+  Time: 0.596843004227
+# ----------------------------------------------------------
+#   Solution Information
+# ----------------------------------------------------------
+Solution: 
+- number of solutions: 1
+  number of solutions displayed: 1
+- Gap: None
+  Status: optimal
+  Message: bonmin\x3a Optimal
+  Objective:
+    Obj:
+      Value: 16164.1484089
+  Variable:
+    yIII:
+      Value: 1
+    C:
+      Value: 16.0363939061
+    Bext:
+      Value: 8.27457627252
+    BIII:
+      Value: 8.27457627121
+    BII:
+      Value: 9.9664017708e-09
+    AI:
+      Value: 9.61019777312e-09
+    CII:
+      Value: 6.47775419941e-08
+    BI:
+      Value: 8.65628776443e-09
+    CosteI:
+      Value: 2.30644746555e-06
+    CosteII:
+      Value: 3.7872326729e-06
+    CIII:
+      Value: 16.0363938413
+    CosteIII:
+      Value: 6444.15254238
+  Constraint: No values
