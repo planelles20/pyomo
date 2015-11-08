@@ -6,8 +6,8 @@
 # ----------------------------------------------------------
 Problem: 
 - Name: unknown
-  Lower bound: 5352.91005291
-  Upper bound: 5352.91005291
+  Lower bound: 3877.19298246
+  Upper bound: 3877.19298246
   Number of objectives: 1
   Number of constraints: 15
   Number of variables: 15
@@ -24,7 +24,7 @@ Solver:
       Number of bounded subproblems: 3
       Number of created subproblems: 3
   Error rc: 0
-  Time: 0.00668001174927
+  Time: 0.0213170051575
 # ----------------------------------------------------------
 #   Solution Information
 # ----------------------------------------------------------
@@ -36,24 +36,24 @@ Solution:
   Message: None
   Objective:
     Obj:
-      Value: 5352.91005291
+      Value: 3877.19298246
   Variable:
     yI:
       Value: 1
+    yIII:
+      Value: 1
     C:
       Value: 20
-    BII:
-      Value: 23.8095238095
+    BIII:
+      Value: 21.0526315789
     AI:
-      Value: 26.455026455
-    CII:
-      Value: 20
-    yII:
-      Value: 1
+      Value: 23.3918128655
     BI:
-      Value: 23.8095238095
+      Value: 21.0526315789
     CosteI:
-      Value: 7449.20634921
-    CosteII:
-      Value: 10647.6190476
+      Value: 6847.95321637
+    CIII:
+      Value: 20
+    CosteIII:
+      Value: 13578.9473684
   Constraint: No values
