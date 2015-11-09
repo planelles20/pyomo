@@ -42,7 +42,7 @@ model.balance_C = Constraint(expr=(model.CII+model.CIII == model.C))
 model.balance_B = Constraint(expr=(model.BI+model.Bext == model.BII+model.BIII))
 
 model.binary = Constraint(expr=(model.yII+model.yIII == 1))
-model.upA = Constraint(expr=(model.AI<=32))
-model.upC = Constraint(expr=(model.C<=20))
+model.upA = Constraint(expr=(model.AI<=16))
+model.upC = Constraint(expr=(model.C<=10))
 
 model.Obj = Objective(expr=(1800*model.C-500*model.AI-950*model.Bext-model.CosteI-model.CosteII-model.CosteIII), sense=maximize)
