@@ -1,9 +1,9 @@
 from __future__ import division
-import numpy as np
 from pyomo.environ import *
 
 model = ConcreteModel()
 
+M = 10
 
 model.yI   = Var(within=Binary)
 model.yII  = Var(within=Binary)
@@ -15,7 +15,7 @@ model.CosteIII = Var()
 
 model.AI   = Var(domain=NonNegativeReals)
 
-model.Bext   = Var(domain=NonNegativeReals)
+model.Bext = Var(domain=NonNegativeReals)
 model.BI   = Var(domain=NonNegativeReals)
 model.BII  = Var(domain=NonNegativeReals)
 model.BIII = Var(domain=NonNegativeReals)
@@ -27,16 +27,18 @@ model.CIII = Var(domain=NonNegativeReals)
 #constraints
 
 model.ConstI1 = Constraint(expr=(model.CosteI == 250*model.AI+1000*model.yI))
-model.ContI2 = Constraint(expr=(model.BI == 0.9*model.AI))
-model.ContI3 = Constraint(expr=(model.AI <= 40*model.yI))
+model.ContsI2 = Constraint(expr=(model.BI == 0.9*model.AI))
+model.ContsI3 = Constraint(expr=(model.AI <= 40*model.yI))
 
 model.ConstII1 = Constraint(expr=(model.CosteII == 400*model.BII+1500*model.yII))
-model.ConstII2 = Constraint(expr=(model.CII == 6.5*log(1+model.BII)))
-model.ConstII3 = Constraint(expr=(model.BII <= 40*model.yII))
+model.ConstII2 = Constraint(expr=(model.CII - 6.5*log(1+model.BII) <=  M*(1-model.yII) ))
+model.ConstII3 = Constraint(expr=(model.CII - 6.5*log(1+model.BII) >= -M*(1-model.yII) ))
+model.ConstII4 = Constraint(expr=(model.BII <= 40*model.yII))
 
 model.ConstIII1 = Constraint(expr=(model.CosteIII == 550*model.BIII+2000*model.yIII))
-model.ConstIII2 = Constraint(expr=(model.CIII == 7.2*log(1+model.BIII)))
-model.ConstIII3 = Constraint(expr=(model.BIII <= 40*model.yIII))
+model.ConstIII2 = Constraint(expr=(model.CIII - 7.2*log(1+model.BIII) <=  M*(1-model.yIII) ))
+model.ConstIII3 = Constraint(expr=(model.CIII - 7.2*log(1+model.BIII) >= -M*(1-model.yIII) ))
+model.ConstIII4 = Constraint(expr=(model.BIII <= 40*model.yIII))
 
 model.balance_C = Constraint(expr=(model.CII+model.CIII == model.C))
 model.balance_B = Constraint(expr=(model.BI+model.Bext == model.BII+model.BIII))

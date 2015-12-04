@@ -20,7 +20,7 @@ Solver:
   Termination condition: optimal
   Id: 3
   Error rc: 0
-  Time: 0.604604005814
+  Time: 0.04842710495
 # ----------------------------------------------------------
 #   Solution Information
 # ----------------------------------------------------------
@@ -32,30 +32,20 @@ Solution:
   Message: bonmin\x3a Optimal
   Objective:
     Obj:
-      Value: 11562.4838197
+      Value: 16500.0001884
   Variable:
     C:
       Value: 10.0000001
-    Bext:
-      Value: 3.65741951687
-    BIII:
-      Value: 9.98565315421e-09
-    BII:
-      Value: 3.65741951579
-    AI:
-      Value: 9.89002559744e-09
     CII:
-      Value: 10.0000000281
+      Value: 6.84321677042e-08
     yII:
       Value: 1
-    BI:
-      Value: 8.90490194059e-09
     CosteI:
-      Value: 2.47250639936e-06
+      Value: -1.23277473971e-06
     CosteII:
-      Value: 2962.96780631
+      Value: 1499.99999806
     CIII:
-      Value: 7.18949967206e-08
+      Value: 10.0000000316
     CosteIII:
-      Value: 5.49210923481e-06
+      Value: -5.22522248335e-06
   Constraint: No values
